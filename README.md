@@ -36,28 +36,7 @@ La aplicación permite a los usuarios comunicarse en tiempo real mediante WebSoc
 
 ## 📂 Estructura del proyecto
 
-/src
-├── components
-│   ├── ChatApp.tsx       # Componente principal
-│   ├── ChatWindow.tsx    # Lista de mensajes
-│   ├── ChatMessage.tsx   # Mensaje individual
-│   ├── ChatInput.tsx     # Entrada de mensajes
-├── hooks
-│   └── useChat.ts        # Hook personalizado
-├── tests
-│   ├── ChatApp.test.tsx       # Pruebas para ChatApp
-│   ├── ChatWindow.test.tsx    # Pruebas para ChatWindow
-│   ├── ChatMessage.test.tsx   # Pruebas para ChatMessage
-│   ├── ChatInput.test.tsx     # Pruebas para ChatInput
-│   └── useChat.test.ts        # Pruebas para el hook useChat
-├── styles
-│   ├── ChatApp.css       # Estilos para ChatApp
-│   ├── ChatWindow.css    # Estilos para ChatWindow
-│   ├── ChatMessage.css   # Estilos para ChatMessage
-│   ├── ChatInput.css     # Estilos para ChatInput
-├── App.tsx               # Punto de entrada del frontend
-├── index.tsx             # Renderización inicial
-└── README.md             # Documentación del proyecto
+![image](https://github.com/user-attachments/assets/040a0007-dd91-47b3-b9aa-da40bdcd8a7f)
 
 
 ## 🚀 Cómo correr la aplicación
