@@ -1,0 +1,38 @@
+.chat-window {
+    border: 1px solid #007bff; 
+    border-radius: 6px;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto; 
+    background-color: #ffffff;
+  }
+  
+  
+  .placeholder {
+    font-size: 3rem; 
+    color: #007bff; 
+    font-weight: bold;
+    animation: blink 1.5s infinite; 
+  }
+  
+  .loading-dots {
+    color: #007bff; 
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    animation: blink 1.5s infinite;
+  }
+  
+  /* Animación para el titileo */
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

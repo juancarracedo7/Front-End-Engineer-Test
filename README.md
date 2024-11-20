@@ -1,46 +1,117 @@
-# Getting Started with Create React App
+# Real-Time Chat Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una aplicación de chat en tiempo real desarrollada con React, TypeScript, custom hooks, WebSockets, y pruebas unitarias con Jest y React Testing Library.
 
-## Available Scripts
+## 🎯 Objetivo
 
-In the project directory, you can run:
+La aplicación permite a los usuarios comunicarse en tiempo real mediante WebSockets. Es un proyecto diseñado para demostrar habilidades avanzadas en:
 
-### `npm start`
+- **React y TypeScript**: Componentes funcionales y tipados.
+- **Gestión de estado**: Custom hooks (useChat).
+- **Pruebas unitarias**: Cobertura con Jest y React Testing Library.
+- **Comunicación en tiempo real**: WebSockets.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ✨ Características principales
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 🚀 **Enviar mensajes**: Escribe y envía mensajes fácilmente desde la interfaz.
+- 💬 **Recibir mensajes en tiempo real**: Los mensajes de otros usuarios aparecen instantáneamente.
+- 💾 **Persistencia local**: Historial de mensajes almacenado en localStorage.
+- 🎨 **Interfaz moderna**: Diseño responsivo con degradados atractivos.
 
-### `npm test`
+## 🛠️ Requisitos del proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Componentes
 
-### `npm run build`
+- **ChatApp**: El componente principal que encapsula toda la lógica.
+- **ChatWindow**: Muestra la lista de mensajes.
+- **ChatMessage**: Renderiza un mensaje individual.
+- **ChatInput**: Campo de entrada para enviar mensajes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Hook personalizado
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **useChat**:
+  - Maneja el estado de los mensajes.
+  - Gestiona la conexión WebSocket.
+  - Persiste datos localmente y establece un identificador único para el usuario.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📂 Estructura del proyecto
 
-### `npm run eject`
+/src
+├── components
+│   ├── ChatApp.tsx       # Componente principal
+│   ├── ChatWindow.tsx    # Lista de mensajes
+│   ├── ChatMessage.tsx   # Mensaje individual
+│   ├── ChatInput.tsx     # Entrada de mensajes
+├── hooks
+│   └── useChat.ts        # Hook personalizado
+├── tests
+│   ├── ChatApp.test.tsx       # Pruebas para ChatApp
+│   ├── ChatWindow.test.tsx    # Pruebas para ChatWindow
+│   ├── ChatMessage.test.tsx   # Pruebas para ChatMessage
+│   ├── ChatInput.test.tsx     # Pruebas para ChatInput
+│   └── useChat.test.ts        # Pruebas para el hook useChat
+├── styles
+│   ├── ChatApp.css       # Estilos para ChatApp
+│   ├── ChatWindow.css    # Estilos para ChatWindow
+│   ├── ChatMessage.css   # Estilos para ChatMessage
+│   ├── ChatInput.css     # Estilos para ChatInput
+├── App.tsx               # Punto de entrada del frontend
+├── index.tsx             # Renderización inicial
+└── README.md             # Documentación del proyecto
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Cómo correr la aplicación
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Pre-requisitos
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Node.js 
+- npm o yarn
 
-## Learn More
+### Instalación
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1-Clona el repositorio:
+git clone https://github.com/tu-usuario/real-time-chat.git
+cd real-time-chat
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2-Instala las dependencias:
+npm install
+
+3-Configura el servidor backend:
+git clone https://github.com/YaVendio/frontend-prueba.git
+cd frontend-prueba
+npm install
+npm start
+
+4-Inicia la aplicación:
+npm start
+
+5-Abre tu navegador en: [http://localhost:3000](http://localhost:3000).
+
+## 🧪 Cómo correr las pruebas
+
+Ejecuta todas las pruebas unitarias con:
+npm test
+
+
+Incluye:
+
+- Pruebas de componentes (ChatApp, ChatWindow, ChatMessage, ChatInput).
+- Pruebas del custom hook (useChat).
+
+## 📈 Principales decisiones técnicas
+
+- **WebSockets**: Comunicación en tiempo real entre cliente y servidor.
+- **Custom Hook**: useChat administra el estado local y la conexión WebSocket.
+- **Persistencia local**: Uso de localStorage para mantener el historial.
+- **Pruebas unitarias**:
+  - Mocking de funciones (e.g., WebSocket, localStorage).
+  - Simulación de interacción con la interfaz (render, fireEvent).
+
+## 🤔 Desafíos enfrentados y soluciones
+
+- **Simulación de WebSocket en pruebas**:
+  - Se utilizó un mock para replicar la funcionalidad del servidor.
+- **Persistencia de mensajes**:
+  - Los mensajes se almacenan en localStorage para mantener el historial tras recargar.
+- **Compatibilidad del backend**:
+  - Aseguramos que el backend maneje los mensajes en tiempo real correctamente.
